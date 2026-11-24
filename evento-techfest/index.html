@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AUTO PREMIER</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__contenedor">
+      <a href="#inicio" class="header__logo">
+        <span class="header__titulo">AUTO PREMIER</span>
+        <span class="header__subtitulo">CONCESIONARIO</span>
+      </a>
+
+      <nav class="header__menu">
+        <a href="#inicio" class="header__enlace">Inicio</a>
+        <a href="#catalogo" class="header__enlace">Catálogo</a>
+        <a href="#servicios" class="header__enlace">Servicios</a>
+        <a href="#financiamiento" class="header__enlace">Financiamiento</a>
+        <a href="#nosotros" class="header__enlace">Nosotros</a>
+        <a href="#contacto" class="header__enlace">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main" id="inicio">
+    <section class="hero">
+      <div class="hero__contenido">
+        <h1 class="hero__titulo">
+          Encuentra el auto <span class="hero__resaltado">ideal para ti</span>
+        </h1>
+        <p class="hero__texto">
+          Amplio catálogo de vehículos, financiamiento flexible y el mejor respaldo.
+        </p>
+        <div class="hero__botones">
+          <a href="#catalogo" class="boton boton--primario">Ver catálogo</a>
+          <a href="#contacto" class="boton boton--secundario">Cotizar ahora</a>
+        </div>
+      </div>
+
+      <div class="hero__imagen-caja">
+        <img src="assets/auto-principal.png" alt="Auto rojo AUTO PREMIER" class="hero__imagen">
+      </div>
+    </section>
+
+    <section class="seccion" id="catalogo">
+      <h2 class="seccion__titulo">Nuestro Catálogo Actual</h2>
+
+      <div class="catalogo__grid">
+        <article class="auto-card">
+          <img src="assets/toyota-rav4.png" alt="Toyota RAV4" class="auto-card__imagen">
+          <div class="auto-card__cuerpo">
+            <h3 class="auto-card__nombre">Toyota RAV4</h3>
+            <p class="auto-card__precio">$38,500 · SUV · 2025</p>
+          </div>
+        </article>
+
+        <article class="auto-card">
+          <img src="assets/bmw-serie-3.png" alt="BMW Serie 3" class="auto-card__imagen">
+          <div class="auto-card__cuerpo">
+            <h3 class="auto-card__nombre">BMW Serie 3</h3>
+            <p class="auto-card__precio">$45,900 · Sedán · 2024</p>
+          </div>
+        </article>
+
+        <article class="auto-card">
+          <img src="assets/ford-mustang.png" alt="Ford Mustang" class="auto-card__imagen">
+          <div class="auto-card__cuerpo">
+            <h3 class="auto-card__nombre">Ford Mustang</h3>
+            <p class="auto-card__precio">$52,800 · Deportivo · 2025</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="seccion" id="servicios">
+      <h2 class="seccion__titulo">Nuestros Servicios</h2>
+      <p class="seccion__subtitulo">Todo lo que necesitas para comprar y mantener tu vehículo.</p>
+
+      <div class="servicios__grid">
+        <article class="servicio-card" id="nosotros">
+          <h3 class="servicio-card__titulo">Garantía y respaldo</h3>
+          <p class="servicio-card__texto">Compra con confianza y respaldo después de tu compra.</p>
+        </article>
+
+        <article class="servicio-card" id="financiamiento">
+          <h3 class="servicio-card__titulo">Financiamiento flexible</h3>
+          <p class="servicio-card__texto">Encuentra planes de pago adaptados a tus posibilidades.</p>
+        </article>
+
+        <article class="servicio-card" id="contacto">
+          <h3 class="servicio-card__titulo">Mantenimiento</h3>
+          <p class="servicio-card__texto">Cuidamos tu vehículo con servicio especializado.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
