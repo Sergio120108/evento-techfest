@@ -21,7 +21,6 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/*2. HEADER*/
 .header {
   background-color: var(--color-fondo);
   border-bottom: 1px solid var(--color-borde);
@@ -69,7 +68,6 @@ body {
   color: var(--color-texto);
 }
 
-/*3. MAIN - PORTADA, CATÁLOGO Y SERVICIOS*/
 .main {
   max-width: 1100px;
   margin: 0 auto;
@@ -221,7 +219,6 @@ body {
   line-height: 1.4;
 }
 
-/*4. ADAPTABILIDAD*/
 @media (max-width: 900px) {
   .hero {
     flex-direction: column;
