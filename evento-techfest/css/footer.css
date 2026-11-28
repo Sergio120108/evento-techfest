@@ -1,0 +1,67 @@
+/* Bloque BEM: .footer */
+.footer {
+  border-top: 1px solid var(--color-borde);
+  background-color: var(--color-fondo);
+  padding: 26px 24px;
+  margin-top: 24px;
+}
+
+.footer__contenedor {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.footer__titulo {
+  display: block;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.footer__resaltado {
+  color: var(--color-rojo);
+}
+
+.footer__lema {
+  display: block;
+  font-size: 12px;
+  color: var(--color-texto-suave);
+  margin-top: 2px;
+}
+
+.footer__redes {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.footer__icono {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: var(--color-rojo);
+  color: var(--color-texto);
+  border: none;
+  font-size: 11px;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.footer__icono:hover {
+  background-color: var(--color-rojo-oscuro);
+  transform: scale(1.06);
+}
+
+.footer__copy {
+  font-size: 11px;
+  color: var(--color-texto-suave);
+}

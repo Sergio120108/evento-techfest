@@ -4,28 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AUTO PREMIER</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header class="header">
+  <header class="header" id="inicio">
     <div class="header__contenedor">
-      <a href="#inicio" class="header__logo">
+      <a href="#inicio" class="header__logo" id="logo-inicio">
         <span class="header__titulo">AUTO PREMIER</span>
         <span class="header__subtitulo">CONCESIONARIO</span>
       </a>
 
-      <nav class="header__menu">
-        <a href="#inicio" class="header__enlace">Inicio</a>
-        <a href="#catalogo" class="header__enlace">Catálogo</a>
-        <a href="#servicios" class="header__enlace">Servicios</a>
-        <a href="#financiamiento" class="header__enlace">Financiamiento</a>
-        <a href="#nosotros" class="header__enlace">Nosotros</a>
-        <a href="#contacto" class="header__enlace">Contacto</a>
+      <nav class="header__menu" aria-label="Navegación principal">
+        <a href="#inicio" class="header__enlace header__enlace--activo" data-vista="inicio">Inicio</a>
+        <a href="#catalogo" class="header__enlace" data-vista="catalogo">Catálogo</a>
+        <a href="#servicios" class="header__enlace" data-vista="servicios">Servicios</a>
+        <a href="#financiamiento" class="header__enlace" data-vista="financiamiento">Financiamiento</a>
+        <a href="#nosotros" class="header__enlace" data-vista="nosotros">Nosotros</a>
+        <a href="#contacto" class="header__enlace" data-vista="contacto">Contacto</a>
       </nav>
+
+      <button type="button" class="header__hamburguesa" id="btn-menu-movil" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
 
-  <main class="main" id="inicio">
+  <main class="main">
     <section class="hero">
       <div class="hero__contenido">
         <h1 class="hero__titulo">
@@ -35,14 +41,13 @@
           Amplio catálogo de vehículos, financiamiento flexible y el mejor respaldo.
         </p>
         <div class="hero__botones">
-          <a href="#catalogo" class="boton boton--primario">Ver catálogo</a>
-          <a href="#contacto" class="boton boton--secundario">Cotizar ahora</a>
+          <button type="button" class="boton boton--primario" id="btn-ver-catalogo">Ver catálogo</button>
+          <button type="button" class="boton boton--secundario" id="btn-cotizar-ahora">Cotizar ahora</button>
         </div>
       </div>
-      <!-- problemas con las imagenes arreglar /recordatorio  -->
 
       <div class="hero__imagen-caja">
-        <!-- <img src="assets/auto-principal.png" alt="Auto rojo AUTO PREMIER" class="hero__imagen"> -->
+        <img src="img/auto-principal.jpg" alt="SUV rojo AUTO PREMIER" class="hero__imagen">
       </div>
     </section>
 
@@ -50,24 +55,24 @@
       <h2 class="seccion__titulo">Nuestro Catálogo Actual</h2>
 
       <div class="catalogo__grid">
-        <article class="auto-card">
-          <!-- <img src="assets/toyota-rav4.png" alt="Toyota RAV4" class="auto-card__imagen"> -->
+        <article class="auto-card" data-auto="Toyota RAV4" data-precio="38500">
+          <img src="img/toyota-rav4.jpg" alt="Toyota RAV4" class="auto-card__imagen">
           <div class="auto-card__cuerpo">
             <h3 class="auto-card__nombre">Toyota RAV4</h3>
             <p class="auto-card__precio">$38,500 · SUV · 2025</p>
           </div>
         </article>
 
-        <article class="auto-card">
-         <!--  <img src="assets/bmw-serie-3.png" alt="BMW Serie 3" class="auto-card__imagen"> -->
+        <article class="auto-card" data-auto="BMW Serie 3" data-precio="45900">
+          <img src="img/bmw-serie-3.jpg" alt="BMW Serie 3" class="auto-card__imagen">
           <div class="auto-card__cuerpo">
             <h3 class="auto-card__nombre">BMW Serie 3</h3>
             <p class="auto-card__precio">$45,900 · Sedán · 2024</p>
           </div>
         </article>
 
-        <article class="auto-card">
-         <!--  <img src="assets/ford-mustang.png" alt="Ford Mustang" class="auto-card__imagen"> -->
+        <article class="auto-card" data-auto="Ford Mustang" data-precio="52800">
+          <img src="img/ford-mustang.jpg" alt="Ford Mustang" class="auto-card__imagen">
           <div class="auto-card__cuerpo">
             <h3 class="auto-card__nombre">Ford Mustang</h3>
             <p class="auto-card__precio">$52,800 · Deportivo · 2025</p>
@@ -81,22 +86,52 @@
       <p class="seccion__subtitulo">Todo lo que necesitas para comprar y mantener tu vehículo.</p>
 
       <div class="servicios__grid">
-        <article class="servicio-card" id="nosotros">
+        <article class="servicio-card" data-vista="nosotros">
           <h3 class="servicio-card__titulo">Garantía y respaldo</h3>
           <p class="servicio-card__texto">Compra con confianza y respaldo después de tu compra.</p>
         </article>
 
-        <article class="servicio-card" id="financiamiento">
+        <article class="servicio-card" data-vista="financiamiento">
           <h3 class="servicio-card__titulo">Financiamiento flexible</h3>
           <p class="servicio-card__texto">Encuentra planes de pago adaptados a tus posibilidades.</p>
         </article>
 
-        <article class="servicio-card" id="contacto">
+        <article class="servicio-card" data-vista="servicios">
           <h3 class="servicio-card__titulo">Mantenimiento</h3>
           <p class="servicio-card__texto">Cuidamos tu vehículo con servicio especializado.</p>
         </article>
       </div>
     </section>
   </main>
+
+  <footer class="footer">
+    <div class="footer__contenedor">
+      <div class="footer__marca">
+        <span class="footer__titulo">AUTO <span class="footer__resaltado">PREMIER</span></span>
+        <span class="footer__lema">Tu próximo auto comienza aquí</span>
+      </div>
+
+      <div class="footer__redes" aria-label="Redes sociales">
+        <button type="button" class="footer__icono" data-red="instagram" aria-label="Instagram">IG</button>
+        <button type="button" class="footer__icono" data-red="facebook" aria-label="Facebook">FB</button>
+        <button type="button" class="footer__icono" data-red="whatsapp" aria-label="WhatsApp">WA</button>
+      </div>
+
+      <p class="footer__copy">© 2026 AUTO PREMIER</p>
+    </div>
+  </footer>
+
+  <!-- Ventana independiente para cada sección y botón -->
+  <div class="ventana" id="ventana-modal" aria-hidden="true">
+    <div class="ventana__caja">
+      <div class="ventana__cabecera">
+        <h2 class="ventana__titulo" id="ventana-titulo"></h2>
+        <button type="button" class="ventana__cerrar" id="btn-cerrar-ventana" aria-label="Cerrar ventana">✕</button>
+      </div>
+      <div class="ventana__cuerpo" id="ventana-cuerpo"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,74 @@
+/* Bloque BEM: .header */
+.header {
+  background-color: var(--color-fondo);
+  border-bottom: 1px solid var(--color-borde);
+  padding: 14px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header__contenedor {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__logo {
+  text-decoration: none;
+  color: var(--color-texto);
+}
+
+.header__titulo {
+  display: block;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.header__subtitulo {
+  display: block;
+  font-size: 9px;
+  color: var(--color-texto-suave);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.header__enlace {
+  text-decoration: none;
+  color: var(--color-texto-suave);
+  font-size: 13px;
+  transition: color 0.2s ease;
+}
+
+.header__enlace:hover,
+.header__enlace--activo {
+  color: var(--color-rojo);
+  font-weight: bold;
+}
+
+.header__hamburguesa {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 4px;
+  padding: 4px;
+}
+
+.header__hamburguesa span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: var(--color-texto);
+}

@@ -1,0 +1,70 @@
+/* Variables globales, reinicio y botones BEM */
+:root {
+  --color-fondo: #111317;
+  --color-tarjeta: #1a1e25;
+  --color-tarjeta-elevada: #222731;
+  --color-texto: #ffffff;
+  --color-texto-suave: #9aa2b1;
+  --color-rojo: #d92b2b;
+  --color-rojo-oscuro: #b31f1f;
+  --color-borde: #292f3a;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: Arial, sans-serif;
+  line-height: 1.45;
+}
+
+.boton {
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.boton:active {
+  transform: scale(0.98);
+}
+
+.boton--primario {
+  background-color: var(--color-rojo);
+  color: var(--color-texto);
+  border: 1px solid var(--color-rojo);
+}
+
+.boton--primario:hover {
+  background-color: var(--color-rojo-oscuro);
+  border-color: var(--color-rojo-oscuro);
+}
+
+.boton--secundario {
+  background-color: transparent;
+  color: var(--color-texto);
+  border: 1px solid #454d5c;
+}
+
+.boton--secundario:hover {
+  background-color: var(--color-tarjeta-elevada);
+  border-color: var(--color-texto-suave);
+}
